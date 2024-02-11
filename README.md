@@ -29,23 +29,10 @@ Running the Tests
 To run the automated tests:
 
 Clone this repository to your local machine.
-Install dependencies using npm install.
-Run the Playwright tests using npx playwright test.
-Directory Structure
-
-bash
-Copy code
-├── tests/                                # Test and assets files        
-├────helpers /       
-│       ├──authHelpers.ts                 # Asset file for tests with authorization
-│       ├──cartHelpers.ts                 # Asset file for tests with cart
-│       ├──productsHelpers.ts             # Asset file for tests with products
-│   ├── userRegistratrionAndLogin.spec.ts # Test file for user registration and login
-│   ├── roductSearchAndFilter.spec.ts     # Test file for product search and filtering
-│   ├── addingItemsToCart.spec.ts         # Test file for adding items to cart
-├── package.json                          # Project dependencies and scripts
-└── README.md                             # Project README file
-Contributing
+Install dependencies using 
+        npm install.
+Run the Playwright tests using 
+        npx playwright test.
 
 If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Contributions are welcome!
 
