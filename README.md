@@ -31,11 +31,11 @@ To run the automated tests:
 Clone this repository to your local machine.
 Install dependencies using
 
-npm install.
+'npm install.'
 
 Run the Playwright tests using
 
-npx playwright test.
+'npx playwright test.'
 
 If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Contributions are welcome!
 
