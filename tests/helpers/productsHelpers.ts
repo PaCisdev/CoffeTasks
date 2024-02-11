@@ -1,4 +1,7 @@
 import { Page , expect} from '@playwright/test';
+import { type } from 'os';
+
+
 
 // Command to search for products by keyword
 export async function searchForProduct(page: Page, keyword: string) {
@@ -25,12 +28,16 @@ export async function applyFilters(page: Page, filters: { minPrice?: number, max
     await page.waitForSelector('.filtered-product-list'); // Assuming there's a container with class "filtered-product-list" for displaying filtered results
 }
 
+
+
+
 // Command to verify search results based on keyword and filters
 export async function verifySearchResults(page: Page, keyword: string, filters: { minPrice?: number, maxPrice?: number }) {
-
     // Verify search keyword is present in displayed products
-    const productTitles = await page.$$eval('.product-list .product-title', (elements: Element[]) => elements.map(element => element.textContent));
-    expect(productTitles.every(title => title.toLowerCase().includes(keyword.toLowerCase()))).toBeTruthy();
+    const productTitles = await page.$$eval('.product-list .product-title', (elements: Element[]) => elements.map((element): string => element.textContent.toLowerCase()));
+    
+    // Use expect with Array.prototype.every() to check if the keyword is present in all product titles
+    expect(productTitles.every(title => title.includes(keyword.toLowerCase()))).toBeTruthy();
 
     // Verify filters are applied correctly
     if (filters.minPrice !== undefined && filters.maxPrice !== undefined) {
@@ -38,3 +45,4 @@ export async function verifySearchResults(page: Page, keyword: string, filters: 
         expect(productPrices.every(price => price >= filters.minPrice && price <= filters.maxPrice)).toBeTruthy();
     }
 }
+

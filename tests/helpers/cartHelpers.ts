@@ -11,6 +11,7 @@ export async function searchForProduct(page: Page, keyword: string) {
 
 // Command to select a product from the search results and navigate to its details page
 export async function selectProduct(page: Page) {
+
     // Implement selecting a product functionality here
     // Example:
     const productLinks = await page.$$('.product-list .product-link');
@@ -19,6 +20,7 @@ export async function selectProduct(page: Page) {
 
 // Command to add the selected product to the shopping cart
 export async function addToCart(page: Page) {
+
     // Implement adding the product to the cart functionality here
     // Example:
     await page.click('button#add-to-cart');
@@ -27,6 +29,7 @@ export async function addToCart(page: Page) {
 
 // Command to verify that the cart updates correctly with the selected item
 export async function verifyCart(page: Page) {
+
     // Implement cart verification functionality here
     // Example:
     const cartItemCount = await getCartItemCount(page);
@@ -38,6 +41,7 @@ export async function verifyCart(page: Page) {
 
 // Command to get the number of items in the cart
 export async function getCartItemCount(page: Page): Promise<number> {
+    
     // Implement getting the number of items in the cart functionality here
     // Example:
     const cartItems = await page.$$('.cart-items .cart-item');
@@ -46,6 +50,7 @@ export async function getCartItemCount(page: Page): Promise<number> {
 
 // Command to get the total price of items in the cart
 export async function getCartTotalPrice(page: Page): Promise<number> {
+
     // Implement getting the total price of items in the cart functionality here
     // Example:
     const cartTotalElement = await page.$('.cart-total');
@@ -55,6 +60,7 @@ export async function getCartTotalPrice(page: Page): Promise<number> {
 
 // Command to remove an item from the cart by its index
 export async function removeItemFromCart(page: Page, index: number) {
+
     // Implement removing an item from the cart functionality here
     // Example:
     const cartItems = await page.$$('.cart-items .cart-item');

@@ -2,6 +2,11 @@ import { test, expect } from '@playwright/test';
 import { searchForProduct, applyFilters, verifySearchResults } from './helpers/productsHelpers.ts';
 import {chromium, Page} from "playwright";
 
+const filters = {
+  minPrice: 10, // Set a non-null value for minPrice
+  maxPrice: 100 // You can also set maxPrice if needed
+};
+
 test.describe(' 2.Product Search and Filter', async () => {
   test('Should displayed products match the search criteria and filters applied.', async ({ page }) => {
     
