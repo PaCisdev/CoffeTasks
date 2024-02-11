@@ -1,0 +1,28 @@
+{
+  "name": "coffetasks",
+  "version": "1.0.0",
+  "description": "Recruitement task for CoffeMug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaCisdev/CoffeTasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaCisdev/CoffeTasks/issues"
+  },
+  "homepage": "https://github.com/PaCisdev/CoffeTasks#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "playwright": "^1.41.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.41.2"
+  }
+}
